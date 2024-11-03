@@ -33,22 +33,7 @@ export function renderGallery(images) {
   lightbox.refresh();
 }
 
-export function showError(message) {
-  iziToast.error({
-    title: 'Error',
-    message: message,
-    position: 'topRight'
-  });
-}
-
-export function showLoader() {
-  document.getElementById('loader').style.display = 'block';
-}
-
-export function hideLoader() {
-  document.getElementById('loader').style.display = 'none';
-}
-
 export function clearGallery() {
-  document.getElementById('gallery').innerHTML = '';
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
 }
