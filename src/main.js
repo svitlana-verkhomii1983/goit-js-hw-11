@@ -8,7 +8,7 @@ const searchForm = document.getElementById('search-form');
 const loader = document.getElementById('loader');
 const gallery = document.getElementById('gallery');
 
-// Обработчик для очистки поля ввода при получении фокуса
+// Опрацьовуємо очищення поля введення при отриманні фокусу
 searchInput.addEventListener('focus', () => {
   searchInput.value = '';
 });
@@ -27,7 +27,7 @@ searchForm.addEventListener('submit', async (event) => {
   }
 
   clearGallery();
-  loader.style.display = 'block';
+  loader.style.display = 'block'; // Показати лоадер
 
   try {
     const images = await fetchImages(query);
@@ -46,6 +46,6 @@ searchForm.addEventListener('submit', async (event) => {
       message: 'An error occurred while fetching images. Please try again later.',
     });
   } finally {
-    loader.style.display = 'none';
+    loader.style.display = 'none'; // Приховати лоадер
   }
 });
